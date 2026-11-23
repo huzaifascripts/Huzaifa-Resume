@@ -1,33 +1,30 @@
 # Resume — Huzaifa Khan
 
-My resume as a web page. It's part of my blog, [Huzaifa Scripts](https://huzaifascripts.dev), and lives at [huzaifascripts.dev/resume/](https://huzaifascripts.dev/resume/).
+My resume as a web page, live at [huzaifa-resume-self.vercel.app](https://huzaifa-resume-self.vercel.app/).
 
 It's plain HTML, CSS and a few lines of JavaScript. No framework and no build step.
 
 ## Files
 
 ```
-resume/
 ├── index.html                  the resume content
 ├── style.css                   layout, colours, print styles
 ├── script.js                   fade-in animation on load
+├── favicon.ico                 tab icon
 └── Huzaifa-Khan-Resume.pdf     downloadable copy (linked from the top bar)
 ```
 
-The favicon is loaded from the site root (`/favicon.ico`), not from this folder.
-
 ## Running it locally
 
-The page uses root-relative paths like `/resume/style.css`, so opening `index.html` straight from your file explorer won't load the styles. Serve the **site root** (the folder that contains `resume/`) instead:
+Open `index.html` in your browser. That's it.
+
+If you'd rather run it on a local server (closer to how Vercel serves it), run this from the project folder:
 
 ```bash
-# from the root of the site
 python3 -m http.server 8000
 ```
 
-Then open http://localhost:8000/resume/ in your browser.
-
-`npx serve .` works too if you'd rather use Node.
+Then open http://localhost:8000.
 
 ## Editing
 
@@ -55,12 +52,12 @@ The page has print styles that lay it out on a single A4 sheet and hide the top 
 3. Set the destination to **Save as PDF**.
 4. Set margins to **None**. The page handles its own margins.
 5. Turn on **Background graphics**, otherwise the skill tags lose their colours.
-6. Save it as `Huzaifa-Khan-Resume.pdf` in this folder, replacing the old one.
+6. Save it as `Huzaifa-Khan-Resume.pdf` in the project folder, replacing the old one.
 7. Bump the `?v=` number on the Download PDF link in `index.html`.
 
 ## Deploying
 
-The resume is deployed with the rest of the site, so there's nothing separate to do. Push the changes and the site redeploys.
+The site is hosted on [Vercel](https://vercel.com) and connected to this repo. Every push to the main branch redeploys it automatically.
 
 ## Notes
 
