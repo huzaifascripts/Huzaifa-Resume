@@ -10,8 +10,7 @@ It's plain HTML, CSS and a few lines of JavaScript. No framework and no build st
 ├── index.html                  the resume content
 ├── style.css                   layout, colours, print styles
 ├── script.js                   fade-in animation on load
-├── favicon.ico                 tab icon
-└── Huzaifa-Khan-Resume.pdf     downloadable copy (linked from the top bar)
+└── favicon.ico                 tab icon
 ```
 
 ## Running it locally
@@ -41,19 +40,18 @@ Then open http://localhost:8000.
 
 **Colours and fonts.** They're all CSS variables at the top of `style.css` (`:root`). Change them there and the whole page updates. Headings use Caprasimo and body text uses Figtree, both from Google Fonts.
 
-**Cache busting.** CSS, JS and the PDF are linked with a version query, for example `style.css?v=4`. After editing a file, bump its number in `index.html` so browsers don't keep the old copy.
+**Cache busting.** The CSS and JS are linked with a version query, for example `style.css?v=4`. After editing a file, bump its number in `index.html` so browsers don't keep the old copy.
 
-## Updating the PDF
+## Saving as PDF
 
-The page has print styles that lay it out on a single A4 sheet and hide the top bar. To make a new PDF:
+The page has print styles that lay it out on a single A4 sheet. To save it as a PDF:
 
 1. Open the page in Chrome or Edge.
 2. Press `Ctrl + P` (`Cmd + P` on Mac).
 3. Set the destination to **Save as PDF**.
 4. Set margins to **None**. The page handles its own margins.
 5. Turn on **Background graphics**, otherwise the skill tags lose their colours.
-6. Save it as `Huzaifa-Khan-Resume.pdf` in the project folder, replacing the old one.
-7. Bump the `?v=` number on the Download PDF link in `index.html`.
+6. Save it as `Huzaifa-Khan-Resume.pdf`.
 
 ## Deploying
 
